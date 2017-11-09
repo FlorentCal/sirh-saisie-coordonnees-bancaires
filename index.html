@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>SGP APP</title>
+		<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css"/>
+		<link rel="stylesheet" href="theme.css"/>
+		<script src="https://code.jquery.com/jquery-1.12.3.js"></script>
+		<script src="app.js"></script>
+				
+	</head>
+	<body>
+		<div class="row" >
+			<div class="col">
+				<h1>
+					SGP - Saisie des coordonnées bancaires
+				</h1>
+			</div>
+		</div>
+		
+		<div class="row margin">
+			<div class="col-6">
+				<table class="table table-bordered table-hover">
+					<thead>
+						<tr class="grey">
+							<th>Matricule</th>
+							<th>Nom</th>
+							<th>Prénom</th>
+						</tr>
+					</thead>
+					<tbody id="tableCollaborateurs">
+					</tbody>
+				</table>
+			</div>
+			<form id="form1" class="col-4 offset-1" method="get">
+				
+				<div class="row margin-bottom">
+					<div class="col-2">
+						<label class="float-right control-label margin-top" for="banque">Banque</label>
+					</div>
+					<div class="col-10">
+						<input id="nom" name="nom" type="text" value="" placeholder="Banque" class="form-control input-md"/>
+					</div>
+				</div>
+				
+				<div class="row margin-bottom">
+					<div class="col-2">
+						<label class="float-right control-label margin-top" for="bic">BIC</label>
+					</div>
+					<div class="col-10">
+						<input id="bic" name="bic" type="text" value="" placeholder="BIC" class="form-control input-md"/>
+					</div>
+				</div>
+				
+				<div class="row margin-bottom">
+					<div class="col-2">
+						<label class="float-right control-label margin-top" for="iban">IBAN</label>
+					</div>
+					
+					<div class="col-10">
+						<input id="iban" name="iban" type="text" value="" placeholder="IBAN" class="form-control input-md"/>
+					</div>
+				</div>
+				
+				<div>
+					<input type="hidden" id="matricule" name="matricule" value=""/>
+					<input id="submit" type="submit" class="btn btn-primary float-right" value="Sauvegarder" onclick="sauvegarder(event);"/>
+				</div>
+			</form>
+		</div>
+	</body>
+</html>
